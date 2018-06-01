@@ -8,6 +8,9 @@
 <%@page import="java.io.BufferedReader"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<link rel="stylesheet" type="text/css" href="include/css/index.css">
+	
 <%
 	String filePath= application.getRealPath("./include/data/lion.txt");
 	
@@ -37,16 +40,18 @@
 			System.out.println(e.toString());
 		}
 		
+		session.setAttribute("lions", lions);
+		
 		Iterator<Lion> iter = lions.iterator();
 		Lion lion = iter.next();
 		System.out.println("이번 사자성어는 ? "+lion.toString());
-	
+		
 
 %>
 <section id="sc_today_lion">
 	오늘의 사자성어는
-	<section id="sp_chinese">過猶不及</section>
-	<section id="sp_chinese">과유불급</section>
-	<section id="sp_mean">지나침은 모자람과 같다.</section>
+	<section id="sp_chinese"><%=lion.getChinese() %></section>
+	<section id="sp_chinese"><%= lion.getKorean() %></section>
+	<section id="sp_mean"><%= lion.getMean() %></section>
 </section>
 
