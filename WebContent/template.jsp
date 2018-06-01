@@ -9,9 +9,7 @@
 	String contentPage = request.getParameter("CONTENTPAGE");
 %>
 <link rel="stylesheet" type="text/css" href="include/css/template.css">
-<link rel="stylesheet" type="text/css" href="include/css/header.css">
-<link rel="stylesheet" type="text/css" href="include/css/footer.css">
-<link rel="stylesheet" type="text/css" href="include/css/menu.css">
+
 </head>
 <body>
 	<jsp:include page="/include/html/header.jsp" flush="false" />

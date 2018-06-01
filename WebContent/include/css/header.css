@@ -1,0 +1,49 @@
+#header{
+	width:100%;
+}
+#sc_title_logo{
+	width:100%;
+	text-align:center;	
+}
+
+#img_logo{
+	width:8%;
+	height:auto;	
+	margin:15px;
+}
+
+#sc_menu{
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+}
+#meue_list{
+	width:80%;
+	background-color:#ffffff;
+	padding:15px 10%;
+	border-top: solid 3px #f36162;
+	border-bottom: solid 3px #f36162;
+}
+
+.menu_item{
+	margin:0;
+	padding:0;
+	width : 24%;
+	letter-spacing:10px;
+	display:inline-block;
+	font-size:1.2em;
+	text-align:center;
+	transition-duration: 0.5s;	
+}
+
+.menu_item>a{
+	text-decoration:none;
+	font-weight:bolder;
+	color:#f36162;
+}
+
+.menu_item:hover{
+	letter-spacing:15px;
+}
+
+
