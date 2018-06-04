@@ -20,6 +20,7 @@
 	var clickIndex = [];
 	var clickChracter = [];
 	
+	
 	function clickCharacter(character, index){
 		document.getElementById("character_index_"+index).innerHTML= character;
 		
@@ -84,6 +85,12 @@
 	
 </script>
 <%
+/*
+session.removeAttribute("Questions");
+session.removeAttribute("QuestionIndex");
+session.removeAttribute("answerIndex");
+session.removeAttribute("StartTime");
+*/
 	final int QUESTION_NUMBER = 5;
 	long seed = System.nanoTime();
 
@@ -96,7 +103,7 @@
     
 	if(session.getAttribute("QuestionIndex") == null){		
 		ArrayList<Lion> questions = new ArrayList<Lion>();
-		int questionIndex = 1;
+		int questionIndex = 0;
 		
 		//FIXME : 매번 같은 값..
 		List<Lion> lionRandomList = new ArrayList<Lion>(lions);
@@ -169,9 +176,12 @@
  		answerIndex = new ArrayList<Integer>();
  		
  		// 정답을 추가
+ 		int[] fixME = {0, 1, 2, 3};
  		for(int i = 0; i<4; i++){
- 			int j = rand.nextInt(QUESTION_NUMBER*4);
- 			if(answerIndex.contains(j)){
+ 			//FIXME@@
+ 			//int j = rand.nextInt(QUESTION_NUMBER*4);
+			int j = fixME[i];
+			if(answerIndex.contains(j)){
  				i--;
  			}else{
  	 			answerIndex.add(j);
@@ -206,7 +216,17 @@
 		%>
 	</section>
 	<section id="sc_korean_hint">
-		<section id="sc_hint_detail"><%= answerLion.getMean() %></section>
+		<section id="sc_hint_detail">
+		<%
+		if(answerLion!=null){
+			out.println(answerLion.getMean()); 
+		}else{
+			%>
+			<META http-equiv=refresh content="0;url=questionIdiom.jsp">
+		<%
+		}
+		%>
+		</section>
 		<section id="sc_answer"><br/></section>
 		<form name="submit_form" action="questionIdiomService.jsp" method="POST">
 			<input id="input_answer" type="hidden" name="input_answer">

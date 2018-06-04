@@ -12,7 +12,7 @@
 	<section id="sc_menu">
 		<ul id="meue_list">
 			<li class="menu_item"><a href="index.jsp"><span id="item_study_korean">사자학습</span></a></li>
-			<li class="menu_item"><a href="questionIdiom.jsp"><span id="item_question_korean">사자문제</span></a></li>
+			<li class="menu_item"><a href="insertUserInfo.jsp"><span id="item_question_korean">사자문제</span></a></li>
 			<li class="menu_item"><a href="rankIdiom.jsp"><span id="item_rank_korean">사자랭킹</span></a></li>
 			<li class="menu_item"><a href="addIdiom.jsp"><span id="item_add_korean">사자추가</span></a></li>
 		</ul>
