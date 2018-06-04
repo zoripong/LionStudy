@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="include/css/index.css">
 	
 <%
+
 	String filePath= application.getRealPath("./include/data/lion.txt");
 	System.out.println(filePath);
 	

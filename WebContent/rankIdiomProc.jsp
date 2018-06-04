@@ -7,7 +7,8 @@
 <%@page import="java.io.BufferedReader"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%="rankIdiomProc.jsp"%>
+
+<link rel="stylesheet" type="text/css" href="include/css/rankIdiom.css">
 
 <%
 	BufferedReader br = null;
@@ -35,5 +36,21 @@
 	}
 	//TODO sort
 	
+	
+	
+	
 
 %>
+<section id="sc_result">
+	<%
+		for(int i = 0; i<results.size(); i++){
+			out.println("<section class=\"sc_result_row\">");
+			out.println("<div class=\"rank\">"+(i+1)+"</div>");
+			out.println("<div class=\"date\">"+results.get(i).getDate()+"</div>");
+			out.println("<div class=\"user_id\">"+results.get(i).getUserID()+"</div>");
+			out.println("<div class=\"score\">"+results.get(i).getScore()+"</div>");
+			out.println("</section>");
+		}
+	%>
+	
+</section>

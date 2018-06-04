@@ -1,0 +1,23 @@
+#sc_result{
+	width:70%;
+	margin-left:15%;
+}
+
+.sc_result_row{
+	width:100%;
+	margin:25px;
+	font-size:1.3em;
+}
+
+.rank{
+	width:5%;
+	text-align:center;
+	display:inline-block;
+}
+
+.date, .user_id, .score{
+	width:30%;
+	text-align:center;
+	display:inline-block;
+}
+
