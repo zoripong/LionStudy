@@ -13,6 +13,7 @@
 	
 <%
 	String filePath= application.getRealPath("./include/data/lion.txt");
+	System.out.println(filePath);
 	
 	// read file
 	BufferedReader br = null;
