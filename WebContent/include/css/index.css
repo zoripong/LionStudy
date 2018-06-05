@@ -1,4 +1,40 @@
 #sc_today_lion{
-	min-height:70%;
-	height:70%;
+	width : 80%;
+	margin-left : 10%;
+	padding : 5% 0;
+	text-align:center;
+}
+
+#span_sub_title{
+	color : #555555;
+	width:40%;
+	display:block;
+	margin-left:30%;
+	margin-bottom: 15px;
+	font-size:1.2em;
+	text-align:left;
+}
+#sub_title_point{
+	color:#f36162;
+	font-weigh:bold;
+	font-size:1.4em;
+}
+#sp_chinese{
+	font-size:7em;
+	font-weight:bold;
+	letter-spacing:75px;	
+}
+#sp_korean{
+	font-size:5em;	
+	letter-spacing:100px;	
+}
+
+#sp_mean{
+	color : #555555;
+	width:60%;
+	margin-left:20%;
+	font-size:1.7em;
+/*	text-align:left;*/
+	text-align:center;
+	margin-top:80px;
 }

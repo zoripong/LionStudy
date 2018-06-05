@@ -42,6 +42,12 @@
 
 %>
 <section id="sc_result">
+	<section class="sc_result_row">
+		<div class="rank title">랭크</div>
+		<div class="date title">날짜</div>
+		<div class="user_id title">ID</div>		
+		<div class="score title">점수</div>
+	</section>
 	<%
 		for(int i = 0; i<results.size(); i++){
 			out.println("<section class=\"sc_result_row\">");

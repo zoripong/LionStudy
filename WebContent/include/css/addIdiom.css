@@ -1,0 +1,48 @@
+#sc_add_lion{
+	width:50%;
+	margin-left:25%;
+	padding:5% 0;
+}
+#sc_description{
+	margin-bottom : 50px;
+}
+#description{
+	font-weight:bolder;
+	font-size:1.5em;
+	margin-bottom:10px;
+}
+#sub_description>a{
+	color : #555555;
+	font-size:1.2em;
+	transition-duration: 0.5s;	
+}
+#sub_description>a:hover{
+	color:#f36162;
+}
+
+#sub_description>a:visited{
+	color:#555555;
+}
+#add_form>input{
+	width:100%;
+	height:50px;
+	margin:10px 0;
+	border-radius : 15px;
+	border : 1px solid #acacac;
+	transition-duration: 0.5s;	
+}
+
+#add_form>input:hover{
+	border-radius : 5px;
+}
+
+#submit_input{
+	border : 1px solid #f36162;
+	background-color : #ffffff;
+	font-size : 1.2em;
+}
+	
+#submit_input:hover{
+	color : #ffffff;
+	background-color : #f36162;
+}

@@ -19,7 +19,6 @@
 	// read file
 	BufferedReader br = null;
 	HashSet<Lion> lions = new HashSet<Lion>();
-	out.println(filePath);
 	
 		try{
 			br = new BufferedReader(new FileReader(filePath));
@@ -51,9 +50,9 @@
 
 %>
 <section id="sc_today_lion">
-	오늘의 사자성어는
+	<span id="span_sub_title">오늘의 <span id="sub_title_point">사자성어</span>는</span>
 	<section id="sp_chinese"><%=lion.getChinese() %></section>
-	<section id="sp_chinese"><%= lion.getKorean() %></section>
+	<section id="sp_korean"><%= lion.getKorean() %></section>
 	<section id="sp_mean"><%= lion.getMean() %></section>
 </section>
 

@@ -1,5 +1,10 @@
+#sc_question{
+	width:80%;
+	margin:0 auto;
+	padding:50px;
+}
 #sc_chinese_map{
-	padding : 25px;
+
 	margin : 25px;
 	width:80%;
 	margin : 2.5px 10%;
@@ -9,7 +14,7 @@
 	text-align:center;
 }
 .chinese_character{
-	background-color : red;
+	background-color : #ffffff;
 	margin:2.5px;
 	display:inline-block;
 	width:100px;
@@ -17,9 +22,69 @@
 	text-align:center;
 	vertical-align:middle;
 	line-height: 100px;
+	border:2px solid #f36162;
+	transition-duration: 0.5s;	
+}
+.chinese_character:hover{
+	background-color : #f36162;
+	color:#ffffff;
+}
+#sc_korean_hint{
+	width:50%;
+	margin-left:25%;
+	margin-top:25px;
+	text-align:center;
+	font-size : 1.5em;
+	color:#555555;
 }
 
-#sc_korean_hint{
+#content{
 	width:80%;
 	margin-left:10%;
+	text-align:center;
+	color : #333333;
+	margin-bottom:15px;
+}
+
+#current{
+	margin-top:50px;
+	font-size:1.7em;
+	font-weight:bolder;
+}
+#answer_index{
+	width:50%;
+	margin-left:15%;
+	text-align:right;
+	font-size:1.5em;
+}
+
+#submit_form{
+	width:60%;
+	margin-left:20%;
+	
+	
+}
+#sc_answer{
+	padding:5px;
+	color : #f36162;
+	font-size : 1.2em;
+	font-weight: bolder;
+}
+#input_submit, #input_pass, #input_reset{
+	width:20%;
+	height:50px;
+	color : #f36162;
+	border-radius:5px;
+	border:2px solid #f36162;
+	background-color : #ffffff;
+	margin:25px 0px;;
+	transition-duration: 0.5s;
+	font-size : 0.7em;
+	font-weight:bolder;
+}
+#input_submit:hover, #input_pass:hover, #input_reset:hover{
+	color : #ffffff;
+	background-color : #f36162;
+	border:none;
+	border-radius:0px;
 }

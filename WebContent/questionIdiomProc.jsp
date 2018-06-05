@@ -28,13 +28,17 @@
 			alert("취소");
 			clickIndex.splice(clickIndex.indexOf(index), 1);
 			clickChracter.splice(clickChracter.indexOf(character), 1);
-			
+			document.getElementById("character_index_"+index).style.color = "#000000";
+			document.getElementById("character_index_"+index).style.backgroundColor = "#ffffff";
+
 		}else{
 			if(clickIndex.length >= 4){
 				alert("이미 4개를 선택하였습니다.");
 			}else{
 				clickIndex.push(index);
 				clickChracter.push(character);
+				document.getElementById("character_index_"+index).style.color = "#ffffff";
+				document.getElementById("character_index_"+index).style.backgroundColor = "#f36162";
 			}
 		}
 		document.getElementById("sc_answer").innerHTML = "";
@@ -179,8 +183,8 @@ session.removeAttribute("StartTime");
  		int[] fixME = {0, 1, 2, 3};
  		for(int i = 0; i<4; i++){
  			//FIXME@@
- 			//int j = rand.nextInt(QUESTION_NUMBER*4);
-			int j = fixME[i];
+ 			int j = rand.nextInt(QUESTION_NUMBER*4);
+			//int j = fixME[i];
 			if(answerIndex.contains(j)){
  				i--;
  			}else{
@@ -191,7 +195,7 @@ session.removeAttribute("StartTime");
  		}
  		
  		System.out.println("정답 : "+answerLion.getKorean());
- 		System.out.println("정답 인덱스 : "+answerIndex.toString());
+ 		out.println("정답 인덱스 : "+answerIndex.toString());
 		
  		session.setAttribute("answerIndex", answerIndex);
 	}
@@ -200,7 +204,10 @@ session.removeAttribute("StartTime");
 	
 %>
 
+
 <section id="sc_question">
+	<section id="answer_index"><span id="current"><%= ((Integer)session.getAttribute("QuestionIndex")+1) %></span> / <%=QUESTION_NUMBER %></section>
+	<section id="content">의미에 해당하는 한자를 선택해주세요.</section>
 	<section id="sc_chinese_map">
 		<%
 			if(questionKoreanTable != null){
@@ -228,11 +235,11 @@ session.removeAttribute("StartTime");
 		%>
 		</section>
 		<section id="sc_answer"><br/></section>
-		<form name="submit_form" action="questionIdiomService.jsp" method="POST">
+		<form id="submit_form" name="submit_form" action="questionIdiomService.jsp" method="POST">
 			<input id="input_answer" type="hidden" name="input_answer">
-			<input onclick="submitAnswer()" type="button" name="submit_btn" value="제출">
-			<input onclick="passAnswer()" type="button" name="pass_btn" value="패스">
-			<input onclick="clearAnswer()" type="button" name="clear_btn" value="초기화">
+			<input id="input_submit"  onclick="submitAnswer()" type="button" name="submit_btn" value="OK">
+			<input id="input_pass"  onclick="passAnswer()" type="button" name="pass_btn" value="PASS">
+			<input id="input_reset"  onclick="clearAnswer()" type="button" name="clear_btn" value="RESET">
 		</form>
 	</section>
 </section>

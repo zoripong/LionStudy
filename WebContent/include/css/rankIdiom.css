@@ -5,19 +5,27 @@
 
 .sc_result_row{
 	width:100%;
+	height:30px;
+	line-height:30px;
 	margin:25px;
+	padding-bottom:10px;
+	font-size:1.2em;
+	border-bottom : 1px solid #f36162;
+	
+}
+.sc_result_row:first-child{
+	padding-top:10px;
+	background-color : #f36162;
+	font-weight:bolder;
+	color:#ffffff;
 	font-size:1.3em;
 }
+.sc_result_row:last-child{
+	border:none;
+}
 
-.rank{
-	width:5%;
+.rank, .date, .user_id, .score{
+	width:23%;
 	text-align:center;
 	display:inline-block;
 }
-
-.date, .user_id, .score{
-	width:30%;
-	text-align:center;
-	display:inline-block;
-}
-
