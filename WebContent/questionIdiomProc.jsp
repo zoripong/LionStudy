@@ -195,7 +195,7 @@ session.removeAttribute("StartTime");
  		}
  		
  		System.out.println("정답 : "+answerLion.getKorean());
- 		out.println("정답 인덱스 : "+answerIndex.toString());
+ 		//out.println("정답 인덱스 : "+answerIndex.toString());
 		
  		session.setAttribute("answerIndex", answerIndex);
 	}
